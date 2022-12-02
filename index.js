@@ -1,4 +1,4 @@
-const frutas = [
+const producto = [
            { id:1, nombre: "pulseras", precio: 2500,  img: `./imagenes/150ac394319b02bcf7294c2ad092cbb2.jpg` },
            { id:2, nombre: "collares", precio: 4500, img:`./imagenes/93904827b7471cbe93395c28322a186a.jpg` },
            { id:3, nombre: "anillo", precio: 1000, img: `./imagenes/abb7965befb7c85a5c9d765b0f9c0f71.jpg`},
@@ -7,7 +7,7 @@ const frutas = [
  let compraCarrito = document.getElementById("compra_carrito");       
 
 let ejecucion = (id) =>{
-    let busquedaProducto = frutas.find(martes => martes.id === id);
+    let busquedaProducto = producto.find(martes => martes.id === id);
     let productoElegido = []; 
     productoElegido.push(busquedaProducto);
   
@@ -32,7 +32,7 @@ let boton = document.getElementById("carrito");
 
 
 let productosAVender = document.getElementById("productos")
-  frutas.forEach((compra) => {
+  producto.forEach((compra) => {
   let objeto = document.createElement("div"); 
    objeto.innerHTML= `
                       <img src="${compra.img}"> 
@@ -46,3 +46,4 @@ let productosAVender = document.getElementById("productos")
     let boton = document.getElementById(`elegir${compra.id}`);
     boton.addEventListener("click",()=> ejecucion(compra.id));
 }); 
+// ____________________________________________
